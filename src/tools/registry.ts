@@ -3,8 +3,9 @@ import type { ToolMeta } from '../types/tool'
 
 const CharterBuilder = lazy(() => import('./charter-builder/CharterBuilder'))
 const PairwiseGenerator = lazy(() => import('./pairwise/PairwiseGenerator'))
+const InteractionMatrix = lazy(() => import('./interaction-matrix/InteractionMatrix'))
 
-export const tools: ToolMeta[] = [
+const toolDefinitions: ToolMeta[] = [
   {
     slug: 'charter-builder',
     title: 'Charter Builder',
@@ -32,6 +33,15 @@ export const tools: ToolMeta[] = [
     Component: PairwiseGenerator,
   },
   {
+    slug: 'interaction-matrix',
+    title: 'Feature Interaction Matrix',
+    shortDescription:
+      'Трикутна матриця перетинів фічей: познач, які пари вже перевірені, а які між собою не стосуються.',
+    category: 'design',
+    status: 'available',
+    Component: InteractionMatrix,
+  },
+  {
     slug: 'decision-table',
     title: 'Decision Table Generator',
     shortDescription:
@@ -56,6 +66,12 @@ export const tools: ToolMeta[] = [
     status: 'planned',
   },
 ]
+
+// Available tools first (in a stable order), planned ones after.
+export const tools: ToolMeta[] = [...toolDefinitions].sort((a, b) => {
+  if (a.status === b.status) return 0
+  return a.status === 'available' ? -1 : 1
+})
 
 export function getToolBySlug(slug: string | undefined): ToolMeta | undefined {
   return tools.find((tool) => tool.slug === slug)

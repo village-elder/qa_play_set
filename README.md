@@ -36,6 +36,7 @@ npm run lint     # oxlint
 | Charter Builder — чартер для сесії дослідницького тестування | ✅ доступний |
 | Boundary Value & Equivalence Partitioning calculator | заплановано |
 | Pairwise Generator | ✅ доступний |
+| Feature Interaction Matrix | ✅ доступний |
 | Decision Table Generator | заплановано |
 | State Transition Tool | заплановано |
 | Test Data Generator (JSON Schema) | заплановано |
