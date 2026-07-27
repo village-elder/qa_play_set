@@ -1,5 +1,7 @@
 # QA Набір інструментів
 
+**Демо: [village-elder.github.io/qa_play_set](https://village-elder.github.io/qa_play_set/)**
+
 Набір веб-інструментів для тест-дизайну та QA. Кожен інструмент
 працює повністю в браузері — без бекенду, без збереження даних на сервері.
 Проєкт публікується на GitHub Pages.
@@ -33,7 +35,7 @@ npm run lint     # oxlint
 | --- | --- |
 | Charter Builder — чартер для сесії дослідницького тестування | ✅ доступний |
 | Boundary Value & Equivalence Partitioning calculator | заплановано |
-| Pairwise Generator | заплановано |
+| Pairwise Generator | ✅ доступний |
 | Decision Table Generator | заплановано |
 | State Transition Tool | заплановано |
 | Test Data Generator (JSON Schema) | заплановано |

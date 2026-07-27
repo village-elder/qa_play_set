@@ -2,6 +2,7 @@ import { lazy } from 'react'
 import type { ToolMeta } from '../types/tool'
 
 const CharterBuilder = lazy(() => import('./charter-builder/CharterBuilder'))
+const PairwiseGenerator = lazy(() => import('./pairwise/PairwiseGenerator'))
 
 export const tools: ToolMeta[] = [
   {
@@ -27,7 +28,8 @@ export const tools: ToolMeta[] = [
     shortDescription:
       'Мінімальний набір комбінацій параметрів, що покриває всі попарні поєднання значень.',
     category: 'design',
-    status: 'planned',
+    status: 'available',
+    Component: PairwiseGenerator,
   },
   {
     slug: 'decision-table',
