@@ -1,0 +1,78 @@
+.intro {
+  text-align: left;
+  max-width: 640px;
+}
+
+.intro h1 {
+  font-size: clamp(32px, 5vw, 44px);
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+}
+
+.intro p {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.tool-card {
+  display: block;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    border-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.tool-card:not(.tool-card-disabled):hover {
+  border-color: var(--accent-border);
+  transform: translateY(-2px);
+}
+
+.tool-card-disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.tool-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.tool-category {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.tool-badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--code-bg);
+  color: var(--text);
+}
+
+.tool-card h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.tool-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+}
